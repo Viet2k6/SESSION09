@@ -1,8 +1,9 @@
 #include <stdio.h> 
 int main() {
-    int index, n;
-	printf("Nhap so luong phan tu cua mang: ");
-    scanf("%d", &n);
+    int index;
+    int n;	
+        printf("Nhap so luong phan tu cua mang: ");
+        scanf("%d", &n);
 
     int arr[n]; 
 	printf("Nhap cac phan tu cua mang:\n");
