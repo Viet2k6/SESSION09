@@ -59,15 +59,15 @@ int main() {
                 if (n == 0) {
                     printf("Mang rong, khong co phan tu de sua\n");
                 } else {
-                    int vi_tri, gia_tri_moi;
+                    int pos, newValue;
                     printf("Nhap vi tri can sua (bat dau tu 0): ");
-                    scanf("%d", &vi_tri);
-                    if (vi_tri < 0 || vi_tri >= n) {
+                    scanf("%d", &pos);
+                    if (pos < 0 || pos >= n) {
                         printf("Vi tri khong hop le\n");
                     } else {
                         printf("Nhap gia tri moi: ");
-                        scanf("%d", &gia_tri_moi);
-                        arr[vi_tri] = gia_tri_moi;
+                        scanf("%d", &newValue);
+                        arr[pos] = newValue;
                         printf("Sua phan tu thanh cong\n");
                     }
                 }
@@ -77,13 +77,13 @@ int main() {
                 if (n == 0) {
                     printf("Mang rong, khong co phan tu de xoa\n");
                 } else {
-                    int vi_tri;
+                    int pos;
                     printf("Nhap vi tri can xoa (bat dau tu 0): ");
-                    scanf("%d", &vi_tri);
-                    if (vi_tri < 0 || vi_tri >= n) {
+                    scanf("%d", &pos);
+                    if (pos < 0 || pos >= n) {
                         printf("Vi tri khong hop le.\n");
                     } else {
-                        for (int i = vi_tri; i < n - 1; i++) {
+                        for (int i = pos; i < n - 1; i++) {
                             arr[i] = arr[i + 1];
                         }
                         n--;
