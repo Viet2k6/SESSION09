@@ -1,6 +1,6 @@
 #include<stdio.h>
 int main() {
-    int array[100], n = 0, choice;
+    int arr[100], n = 0, choice;
 
     while (1) {
         printf("\nMENU\n");
@@ -22,14 +22,14 @@ int main() {
                 printf("Nhap gia tri cac phan tu:\n");
                 for (int i = 0; i < n; i++) {
                     printf("Phan tu thu %d: ", i + 1);
-                    scanf("%d", &array[i]);
+                    scanf("%d", &arr[i]);
                 }
                 break;
 
             case 2:
                 printf("Cac phan tu dang quan ly la: ");
                 for (int i = 0; i < n; i++) {
-                    printf("%d ", array[i]);
+                    printf("%d ", arr[i]);
                 }
                 printf("\n");
                 break;
@@ -39,9 +39,9 @@ int main() {
                     int sum = 0;
                     printf("Cac phan tu chan la: ");
                     for (int i = 0; i < n; i++) {
-                        if (array[i] % 2 == 0) {
-                            printf("%d ", array[i]);
-                            sum += array[i];
+                        if (arr[i] % 2 == 0) {
+                            printf("%d ", arr[i]);
+                            sum += arr[i];
                         }
                     }
                     printf("\nTong cac phan tu chan la: %d\n", sum);
@@ -51,10 +51,10 @@ int main() {
             case 4:
                 {
                     if (n > 0) {
-                        int max = array[0], min = array[0];
+                        int max = arr[0], min = arr[0];
                         for (int i = 1; i < n; i++) {
-                            if (array[i] > max) max = array[i];
-                            if (array[i] < min) min = array[i];
+                            if (arr[i] > max) max = arr[i];
+                            if (arr[i] < min) min = arr[i];
                         }
                         printf("Gia tri lon nhat la: %d\n", max);
                         printf("Gia tri nho nhat la: %d\n", min);
@@ -70,19 +70,19 @@ int main() {
                     printf("Cac phan tu la so nguyen to la: ");
                     for (int i = 0; i < n; i++) {
                         int is_prime = 1;
-                        if (array[i] < 2) {
+                        if (arr[i] < 2) {
                             is_prime = 0;
                         } else {
-                            for (int j = 2; j * j <= array[i]; j++) {
-                                if (array[i] % j == 0) {
+                            for (int j = 2; j * j <= arr[i]; j++) {
+                                if (arr[i] % j == 0) {
                                     is_prime = 0;
                                     break;
                                 }
                             }
                         }
                         if (is_prime) {
-                            printf("%d ", array[i]);
-                            sum += array[i];
+                            printf("%d ", arr[i]);
+                            sum += arr[i];
                         }
                     }
                     printf("\nTong cac so nguyen to la: %d\n", sum);
@@ -95,7 +95,7 @@ int main() {
                     printf("Nhap so can thong ke: ");
                     scanf("%d", &x);
                     for (int i = 0; i < n; i++) {
-                        if (array[i] == x) count++;
+                        if (arr[i] == x) count++;
                     }
                     printf("So %d xuat hien %d lan trong mang.\n", x, count);
                 }
@@ -110,13 +110,13 @@ int main() {
                     scanf("%d", &pos);
                     if (pos >= 0 && pos <= n) {
                         for (int i = n; i > pos; i--) {
-                            array[i] = array[i - 1];
+                            arr[i] = arr[i - 1];
                         }
-                        array[pos] = value;
+                        arr[pos] = value;
                         n++;
                         printf("Mang moi la: ");
                         for (int i = 0; i < n; i++) {
-                            printf("%d ", array[i]);
+                            printf("%d ", arr[i]);
                         }
                         printf("\n");
                     } else {
